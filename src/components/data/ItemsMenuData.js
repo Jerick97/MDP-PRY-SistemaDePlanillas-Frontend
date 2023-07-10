@@ -1,12 +1,12 @@
 export const ItemsMenuData = [
   {
     title: 'Dashboard',
-    href: '/dashboard',
+    href: '/base/dashboard',
     iconClass: 'fa-solid fa-house',
   },
   {
     title: 'Employed',
-    href: '/create/employed',
+    href: '/base/create_employed',
     iconClass: 'fa-solid fa-users',
   },
   {
@@ -18,5 +18,10 @@ export const ItemsMenuData = [
     title: 'Products',
     href: '#',
     iconClass: 'fa-solid fa-boxes-packing',
+  },
+  {
+    title: 'Login',
+    href: '/auth',
+    iconClass: 'fa-solid fa-user',
   }
 ];
