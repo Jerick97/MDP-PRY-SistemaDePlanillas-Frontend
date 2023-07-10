@@ -1,7 +1,7 @@
 import MicrosoftLogin from "react-microsoft-login";
 
-import "../assets/demo.css";
-import logo from './img/logo_top_header_shadow.png';
+import "./Login.css";
+import logo from '../../assets/images/logo_top_header_shadow.png';
 import { useState } from 'react'
 
 
@@ -127,3 +127,5 @@ export const Login = () => {
     </>
   );
 };
+
+export default Login;
