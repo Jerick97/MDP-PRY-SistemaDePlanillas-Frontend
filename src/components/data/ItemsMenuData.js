@@ -18,5 +18,10 @@ export const ItemsMenuData = [
     title: 'Products',
     href: '#',
     iconClass: 'fa-solid fa-boxes-packing',
+  },
+  {
+    title: 'Login',
+    href: '/login',
+    iconClass: 'fa-solid fa-user',
   }
 ];
