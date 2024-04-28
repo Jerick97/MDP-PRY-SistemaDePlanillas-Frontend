@@ -10,13 +10,16 @@ function BaseTemplate() {
   return (
     <>
       <nav className={sidebar ? "p-0" : "p-0 close"}>
-        <div
-          className={sidebar ? "logo-name pt-3 px-3" : "logo-name pt-1 px-3"}
-        >
+        <div className={sidebar ? "logo-name pt-3 px-3" : "logo-name p-3"}>
           <div className="logo-image">
-            <img src="../src/assets/images/mdpLogo.jpg" alt="" />
+            <img src="../src/assets/images/mdpLogo.jpg" alt="logo mdp" />
           </div>
-          <span className="logo_name">Planillas MDP</span>
+          <span
+            className={`${sidebar ? "logo_name" : "d-none"}`}
+            style={{ whiteSpace: "nowrap" }}
+          >
+            Planillas MDP
+          </span>
         </div>
         <div className="menu-items ">
           <ul className="p-0 nav-links">
