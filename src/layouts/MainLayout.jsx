@@ -1,12 +1,11 @@
-import "./baseTemplate.css";
+import "../assets/css/BaseTemplate.css";
 import { useState } from "react";
-import { ItemsMenuData } from "../data/ItemsMenuData";
-import ContentMainRoutes from "../../routes/ContentMainRoutes";
+import { ItemsMenuData } from "../components/data/ItemsMenuData";
+import { Link, Outlet } from "react-router-dom";
 
-function BaseTemplate() {
+function MainLayout() {
   const [sidebar, setSidebar] = useState(true);
   const showSidebar = () => setSidebar(!sidebar);
-
   return (
     <>
       <nav className={sidebar ? "p-0" : "p-0 close"}>
@@ -26,10 +25,10 @@ function BaseTemplate() {
             {ItemsMenuData.map((item, index) => {
               return (
                 <li key={index}>
-                  <a href={item.href}>
+                  <Link to={item.href}>
                     <i className={item.iconClass + " m-3"}></i>
                     <span className="link-name">{item.title}</span>
-                  </a>
+                  </Link>
                 </li>
               );
             })}
@@ -65,12 +64,10 @@ function BaseTemplate() {
           <div className="overview"></div>
           <div className="activity"></div>
         </div>
-        <div>
-          <ContentMainRoutes />
-        </div>
+        <Outlet />
       </section>
     </>
   );
 }
 
-export default BaseTemplate;
+export default MainLayout;

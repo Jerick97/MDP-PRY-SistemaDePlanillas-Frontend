@@ -1,13 +1,9 @@
-import BaseTemplate from "./components/layout/baseTemplate";
-import './App.css';
-import GlobalRoutes from "./routes/GlobalRoutes";
+import "./App.css";
+import { RouterProvider } from "react-router-dom";
+import router from "./routes/router";
 
 function App() {
-  return (
-    <>
-      <GlobalRoutes />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

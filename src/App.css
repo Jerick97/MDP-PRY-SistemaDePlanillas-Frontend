@@ -1,4 +1,7 @@
 .bg-main {
-    background-color: #efefef;
-    /* background-color: #f2f5f7; */
+  background-color: #efefef;
+}
+
+.error-page__container {
+  height: 100vh;
 }
