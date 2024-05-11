@@ -1,6 +1,7 @@
 import "../assets/css/BaseTemplate.css";
 import { useState } from "react";
 import { ItemsMenuData } from "../components/data/ItemsMenuData";
+import LogoMdp from "../assets/images/mdpLogo.jpg";
 import { Link, Outlet } from "react-router-dom";
 
 function MainLayout() {
@@ -11,7 +12,7 @@ function MainLayout() {
       <nav className={sidebar ? "p-0" : "p-0 close"}>
         <div className={sidebar ? "logo-name pt-3 px-3" : "logo-name p-3"}>
           <div className="logo-image">
-            <img src="../src/assets/images/mdpLogo.jpg" alt="logo mdp" />
+            <img src={LogoMdp} alt="logo mdp" />
           </div>
           <span
             className={`${sidebar ? "logo_name" : "d-none"}`}

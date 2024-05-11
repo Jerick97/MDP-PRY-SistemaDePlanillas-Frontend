@@ -1,7 +1,7 @@
 export const ItemsMenuData = [
   {
     title: "Dashboard",
-    href: "/dashboard",
+    href: "/",
     iconClass: "fa-solid fa-house",
   },
   {
