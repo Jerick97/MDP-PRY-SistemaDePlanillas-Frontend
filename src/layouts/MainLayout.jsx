@@ -2,6 +2,7 @@ import "../assets/css/BaseTemplate.css";
 import { useState } from "react";
 import { ItemsMenuData } from "../components/data/ItemsMenuData";
 import LogoMdp from "../assets/images/mdpLogo.jpg";
+import Avatar from "../assets/images/Avatar1.jpg";
 import { Link, Outlet } from "react-router-dom";
 
 function MainLayout() {
@@ -58,7 +59,7 @@ function MainLayout() {
             <i className="uil uil-search"></i>
             <input type="text" placeholder="Search here..." />
           </div>
-          <img src="../src/assets/images/perfil2.jpg" alt="" />
+          <img src={Avatar} alt="user" />
         </div>
 
         <div className="dash-content">
