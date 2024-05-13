@@ -1,3 +1,4 @@
+import Avatar from "../../assets/images/Avatar1.jpg";
 const FormPerfil = () => {
   return (
     <div className="bg-light">
@@ -60,7 +61,7 @@ const FormPerfil = () => {
           <div className="col-md-3 d-flex flex-column justify-content-center align-items-center">
             <div className="rounded">
               <img
-                src="../src/assets/images/perfil2.jpg"
+                src={Avatar}
                 alt="Imagen"
                 className="img-fluid img-thumbnail"
                 style={{ maxWidth: "100px" }}

@@ -1,7 +1,27 @@
 .bg-main {
-  background-color: #efefef;
+  background-color: #1e1e2d !important;
 }
 
 .error-page__container {
   height: 100vh;
+}
+
+.hidden {
+  display: none;
+}
+
+.menu-items ul a {
+  color: #bcbcbc;
+}
+
+.menu-items ul a:hover,
+.menu-items ul a:hover i {
+  color: #fff;
+  font-weight: 900;
+}
+
+.menu-items ul a.active,
+.menu-items ul a.active i {
+  color: #fff !important;
+  font-weight: 900;
 }

@@ -1,4 +1,4 @@
-import { useRouteError } from "react-router-dom";
+import { Link, useRouteError } from "react-router-dom";
 
 function ErrorPage() {
   const error = useRouteError();
@@ -13,6 +13,10 @@ function ErrorPage() {
       <p>
         <i>{error.statusText || error.message}</i>
       </p>
+
+      <Link to="/" className="btn btn-dark">
+        Volver al Inicio
+      </Link>
     </div>
   );
 }

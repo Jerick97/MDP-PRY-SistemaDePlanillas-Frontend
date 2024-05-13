@@ -30,6 +30,7 @@ body {
   min-height: 100vh;
   background-color: var(--primary-color);
 }
+
 body.dark {
   --primary-color: #3a3b3c;
   --panel-color: #242526;
@@ -72,9 +73,6 @@ nav {
   width: 250px;
   padding: 10px 14px;
   background-color: #1e1e2d;
-
-  /* background-color: var(--panel-color); */
-  border-right: 1px solid var(--border-color);
   transition: var(--tran-05);
 }
 nav.close {
@@ -98,7 +96,6 @@ nav .logo-name .logo_name {
   font-size: 22px;
   font-weight: 600;
   color: #ffffff;
-  /* color: var(--text-color); */
   margin-left: 14px;
   transition: var(--tran-05);
 }
@@ -145,13 +142,11 @@ body.dark li a:hover:before {
   align-items: center;
   justify-content: center;
   color: var(--black-light-color);
-  color: #9d9da6;
 }
 .menu-items li a .link-name {
   font-size: 18px;
   font-weight: 400;
-  color: #9d9da6;
-  /* color: var(--black-light-color);     */
+  color: #bcbcbc;
   transition: var(--tran-05);
 }
 nav.close li a .link-name {
@@ -162,10 +157,14 @@ nav.close li a .link-name {
 .nav-links li a:hover .link-name {
   color: var(--primary-color);
 }
+
+.mode {
+  color: #bcbcbc;
+}
+
 body.dark .nav-links li a:hover i,
 body.dark .nav-links li a:hover .link-name {
-  color: #ffffff;
-  /* color: var(--text-color); */
+  color: var(--text-color);
 }
 .menu-items .logout-mode {
   padding-top: 10px;
@@ -218,6 +217,7 @@ body.dark .switch:before {
   width: calc(100% - 250px);
   padding: 10px 14px;
   transition: var(--tran-05);
+  border: none;
 }
 nav.close ~ .dashboard {
   left: 73px;

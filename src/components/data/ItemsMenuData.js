@@ -1,23 +1,28 @@
 export const ItemsMenuData = [
   {
-    title: "Dashboard",
+    title: "Inicio",
     href: "/",
     iconClass: "fa-solid fa-house",
   },
   {
-    title: "Employed",
+    title: "Empleados",
     href: "/create_employed",
+    iconClass: "fa-solid fa-address-card",
+  },
+  {
+    title: "Usuarios",
+    href: "/users",
     iconClass: "fa-solid fa-users",
   },
   {
-    title: "Reports",
-    href: "#",
-    iconClass: "fa-solid fa-file-lines",
+    title: "Pagos",
+    href: "/payments",
+    iconClass: "fa-solid fa-credit-card",
   },
   {
-    title: "Products",
-    href: "#",
-    iconClass: "fa-solid fa-boxes-packing",
+    title: "Configuración",
+    href: "/config",
+    iconClass: "fa-solid fa-gear",
   },
   {
     title: "Login",
