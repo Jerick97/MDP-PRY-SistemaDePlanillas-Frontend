@@ -4,21 +4,20 @@ import { ItemsMenuData } from "../components/data/ItemsMenuData";
 import LogoMdp from "../assets/images/mdpLogo.jpg";
 import Avatar from "../assets/images/Avatar1.jpg";
 import { Outlet, NavLink } from "react-router-dom";
+import Theme from "../components/Theme/Theme";
 
 function MainLayout() {
   const [sidebar, setSidebar] = useState(true);
   const showSidebar = () => setSidebar(!sidebar);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const storedDarkMode = localStorage.getItem("darkMode");
+  const [isDarkMode, setIsDarkMode] = useState(
+    storedDarkMode ? JSON.parse(storedDarkMode) : false
+  );
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1000);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 1000);
     };
 
     window.addEventListener("resize", handleResize);
@@ -27,6 +26,10 @@ function MainLayout() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("darkMode", JSON.stringify(isDarkMode));
+  }, [isDarkMode]);
 
   return (
     <>
@@ -61,22 +64,13 @@ function MainLayout() {
                 <div className={`${isMobile ? "hidden" : "d-none d-md-block"}`}>
                   <i className="fa-regular fa-sun"></i>
                   <span className="link-name mx-1">
-                    {isDarkMode ? "Light Mode" : "Dark Mode"}
+                    {isDarkMode ? "Dark Mode" : "Light Mode"}
                   </span>
                 </div>
               ) : (
                 <span>&nbsp;</span>
               )}
-              <div className="form-check form-switch mode-toggle">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  role="switch"
-                  id="flexSwitchCheckChecked"
-                  checked={isDarkMode}
-                  onChange={toggleDarkMode}
-                />
-              </div>
+              <Theme isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
             </li>
           </ul>
         </div>
@@ -100,9 +94,8 @@ function MainLayout() {
             </a>
             <div className="navbar-nav me-lg-3 mx-lg-4">
               <div className="flex-shrink-0 dropdown">
-                <a
-                  href="#"
-                  className="d-block link-body-emphasis text-decoration-none dropdown-toggle remove-dropdown-arrow"
+                <button
+                  className="d-block bg-transparent border-0 link-body-emphasis text-decoration-none dropdown-toggle remove-dropdown-arrow"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
@@ -111,7 +104,7 @@ function MainLayout() {
                     alt="mdo"
                     className="rounded-circle header-image-user"
                   />
-                </a>
+                </button>
                 <ul className="dropdown-menu dropdown-menu-end text-small shadow position-absolute mt-3 header-option custom-dropdown-menu">
                   <li className="dropdown-item bg-transparent">
                     <div className="d-flex align-items-center">
