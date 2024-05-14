@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import Login from "../pages/auth/Login";
-import Dashboard from "../pages/dashboard/Dashboard";
 import CreateEmployed from "../pages/createEmployed/CreateEmployed";
 import LoginLayout from "../layouts/LoginLayout";
 import ErrorPage from "../pages/errorPage/ErrorPage";
 import MainLayout from "../layouts/MainLayout";
+import Home from "../pages/home/Home";
 
 export const router = createBrowserRouter([
   {
@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Dashboard />,
+        element: <Home />,
       },
       {
         path: "create_employed",
