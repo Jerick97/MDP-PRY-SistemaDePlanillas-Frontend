@@ -1,4 +1,7 @@
 import PropTypes from "prop-types";
+import ActionIcon from "../../assets/icons/dashboard/action1.png";
+import UserBlue24 from "../../assets/icons/typeUser/blue-24.png";
+import UserGreen24 from "../../assets/icons/typeUser/green-24.png";
 
 export const ActivityBox = ({ activity, index }) => {
   return (
@@ -11,11 +14,7 @@ export const ActivityBox = ({ activity, index }) => {
         <div className="text-hour-activity ">{activity.hour}</div>
       </div>
       <div className="col-1 status-activity ">
-        <img
-          src="../../src/assets/icons/dashboard/action1.png"
-          alt="action icon"
-          className="mt-3"
-        />
+        <img src={ActionIcon} alt="action icon" className="mt-3" />
         <div className="lineagris" />
       </div>
       <div className="col-7">
@@ -26,9 +25,7 @@ export const ActivityBox = ({ activity, index }) => {
       <div className="col-2 userimg d-flex justify-content-center align-items-center">
         <img
           className="img-user-type"
-          src={`../../src/assets/icons/typeUser/${
-            activity.typeUser === "usuario" ? "green" : "blue"
-          }-24.png`}
+          src={`${activity.typeUser === "usuario" ? UserGreen24 : UserBlue24}`}
           alt="userimg"
         />
       </div>
