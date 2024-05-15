@@ -10,7 +10,7 @@ function Card({ typeEmployee, totalEmployees, nameCompany }) {
       : "background-card-blue";
   return (
     <>
-      <div className="card-widget d-none d-md-block me-3">
+      <div className="card-widget d-none d-md-block me-auto mt-2">
         <div
           className={`card-content ${customClass} 
         d-flex flex-column justify-content-between p-3`}

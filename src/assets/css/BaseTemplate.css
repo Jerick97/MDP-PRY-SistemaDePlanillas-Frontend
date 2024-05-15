@@ -18,7 +18,10 @@
   --box1-color: #4da3ff;
   --box2-color: #ffe6ac;
   --box3-color: #e7d1fc;
+  --box4-color: #f3f6f9;
   --title-icon-color: #fff;
+  --title-text-card: #243250;
+  --text-card: #293959;
 
   /* ====== Transition ====== */
   --tran-05: all 0.5s ease;
@@ -41,7 +44,10 @@ body.dark {
   --box1-color: #3a3b3c;
   --box2-color: #3a3b3c;
   --box3-color: #3a3b3c;
+  --box4-color: #3a3b3c;
   --title-icon-color: #ccc;
+  --title-text-card: #fff;
+  --text-card: #fff;
 }
 /* === Custom Scroll Bar CSS === */
 ::-webkit-scrollbar {

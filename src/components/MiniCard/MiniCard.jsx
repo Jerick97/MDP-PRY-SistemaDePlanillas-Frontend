@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 function MiniCard({ typeEmployee, totalEmployees, nameCompany }) {
   return (
-    <div className="card-mini me-3">
+    <div className="card-mini me-2">
       <div
         className={`text-white card-body background-card-${
           typeEmployee == "empleados" ? "red" : "blue"
