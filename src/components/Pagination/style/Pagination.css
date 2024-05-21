@@ -1,0 +1,34 @@
+.custom-pagination {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  margin: 0.2rem;
+}
+
+.custom-pagination-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e1e2d;
+  border-color: transparent;
+  color: #fff;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  margin: 0 0.2rem;
+  cursor: pointer;
+}
+
+.custom-pagination-btn:hover {
+  background-color: #009ef7;
+  border-color: transparent;
+  color: #fff;
+}
+
+.custom-pagination-btn.active {
+  background-color: #009ef7;
+  border-color: transparent;
+  color: #fff;
+}
