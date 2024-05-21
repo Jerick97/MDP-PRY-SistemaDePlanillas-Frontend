@@ -1,0 +1,26 @@
+.btn-primary-icon {
+  color: #ffffff;
+  background-color: #3699ff;
+  border-color: transparent;
+}
+
+.btn-primary-icon-hover:hover {
+  background-color: #2a7fd6;
+}
+
+.btn-primary-icon-text {
+  margin-right: 0.5rem;
+}
+
+.btn-primary-icon-bg {
+  background-color: #2a7fd6;
+}
+
+.btn-primary-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  outline: none;
+}

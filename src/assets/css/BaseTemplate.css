@@ -22,7 +22,7 @@
   --title-icon-color: #fff;
   --title-text-card: #243250;
   --text-card: #293959;
-
+  --text-title: #3a3b3c;
   /* ====== Transition ====== */
   --tran-05: all 0.5s ease;
   --tran-03: all 0.3s ease;
@@ -48,6 +48,7 @@ body.dark {
   --title-icon-color: #ccc;
   --title-text-card: #fff;
   --text-card: #fff;
+  --text-title: #fff;
 }
 /* === Custom Scroll Bar CSS === */
 ::-webkit-scrollbar {
@@ -433,6 +434,12 @@ nav.close ~ .dashboard .top {
 
 .dropdown-divider {
   border: 0.5px solid #9f9e9e;
+}
+
+.text-primario {
+  color: var(--text-title);
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 
 @media (max-width: 365px) {
