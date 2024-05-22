@@ -2,6 +2,7 @@ import { ViewUser } from "./ViewUser";
 import { EmployeList } from "../../components/data/EmployedList";
 import { useState } from "react";
 import Pagination from "../../components/Pagination/Pagination";
+import Avatar from "../../assets/icons/typeUser/green-36.png";
 
 function Dashboard() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -21,10 +22,10 @@ function Dashboard() {
 
   return (
     <>
-      <div className="container-fluid border rounded bg-white">
-        <div className="table-responsive">
-          <table className="table">
-            <thead>
+      <div className="container-fluid border rounded p-0">
+        <div className="table-responsive rounded">
+          <table className={`table table-dark-mode table-striped table-hover`}>
+            <thead className="table-header">
               <tr>
                 <th>Código</th>
                 <th>Empleado</th>
@@ -35,13 +36,33 @@ function Dashboard() {
                 <th>Acción</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="fw-medium">
               {currentRecords.map((registro, index) => (
                 <tr key={index}>
                   <td>{registro.codigo}</td>
-                  <td>{registro.empleado}</td>
-                  <td>{registro.documento}</td>
-                  <td>{registro.sueldo}</td>
+                  <td>
+                    <div className="employee-container">
+                      <img
+                        src={Avatar}
+                        alt="avatar"
+                        className="employee-avatar"
+                      />
+                      <div className="d-flex flex-column align-items-start justify-content-center">
+                        <p className="fs-6 fw-bold mb-0">{registro.empleado}</p>
+                        <p className="text-small mb-0">{registro.birthday}</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="d-flex flex-column align-items-start justify-content-center">
+                    <p className="fs-6 fw-bold mb-0">{registro.documento}</p>
+                    <p className="text-small mb-0">DNI</p>
+                  </td>
+                  <td>
+                    <div className="d-flex flex-column align-items-start justify-content-center">
+                      <p className="fs-6 fw-bold mb-0">{registro.sueldo}</p>
+                      <p className="text-small mb-0">Paid</p>
+                    </div>
+                  </td>
                   <td>
                     <input type="checkbox" defaultChecked={registro.planilla} />
                   </td>
@@ -49,8 +70,8 @@ function Dashboard() {
                     <span
                       className={`badge ${
                         registro.estado === "Activo"
-                          ? "bg-success"
-                          : "bg-warning"
+                          ? "bagge-success"
+                          : "bagge-warning"
                       }`}
                     >
                       {registro.estado}
