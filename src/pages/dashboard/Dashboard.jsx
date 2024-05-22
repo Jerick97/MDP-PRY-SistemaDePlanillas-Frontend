@@ -53,11 +53,13 @@ function Dashboard() {
                       </div>
                     </div>
                   </td>
-                  <td className="d-flex flex-column align-items-start justify-content-center">
-                    <p className="fs-6 fw-bold mb-0">{registro.documento}</p>
-                    <p className="text-small mb-0">DNI</p>
-                  </td>
                   <td>
+                    <div className="d-flex flex-column align-items-start justify-content-center">
+                      <p className="fs-6 fw-bold mb-0">{registro.documento}</p>
+                      <p className="text-small mb-0">DNI</p>
+                    </div>
+                  </td>
+                  <td className="h-full">
                     <div className="d-flex flex-column align-items-start justify-content-center">
                       <p className="fs-6 fw-bold mb-0">{registro.sueldo}</p>
                       <p className="text-small mb-0">Paid</p>
