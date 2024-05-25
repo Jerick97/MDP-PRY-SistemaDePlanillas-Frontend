@@ -6,7 +6,7 @@ import UserGreen24 from "../../assets/icons/typeUser/green-24.png";
 export const ActivityBox = ({ activity, index }) => {
   return (
     <div
-      className={`row flex-nowrap align-items-center overflow-auto my-2 activity ${
+      className={`row flex-nowrap align-items-center overflow-x-hidden my-2 activity ${
         index === 0 ? "new-activity" : "old-activity"
       }`}
     >

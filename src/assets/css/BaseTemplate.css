@@ -23,6 +23,7 @@
   --title-text-card: #243250;
   --text-card: #293959;
   --text-title: #3a3b3c;
+  --text-color-input: #6c757d;
 
   --bg-base-table: #fff;
   --color-base-table: #212529;
@@ -62,6 +63,7 @@ body.dark {
   --title-text-card: #fff;
   --text-card: #fff;
   --text-title: #fff;
+  --text-color-input: #fff;
 
   --bg-base-table: #212529;
   --color-base-table: #fff;
@@ -539,10 +541,7 @@ nav.close ~ .dashboard .top {
   .header-username {
     font-size: 0.8rem;
   }
-  .header-image-user {
-    width: 1.8rem;
-    height: 1.8rem;
-  }
+
   .custom-dropdown-menu {
     max-width: 13rem !important;
   }

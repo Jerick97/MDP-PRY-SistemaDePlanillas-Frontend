@@ -47,29 +47,39 @@ function Home() {
         <div className="w-full h-25 pb-1 pt-3">
           <h3 className="text-primario">Inicio</h3>
         </div>
-        <div className="d-flex justify-content-between  align-items-center rounded my-2">
-          <Card
-            typeEmployee="empleados"
-            totalEmployees={100}
-            nameCompany="MDP"
-          />
-          <Card typeEmployee="usuarios" totalEmployees={5} nameCompany="MDP" />
-          <LastActivitiesCard
-            activities={activities}
-            handleAddActivity={handleAddActivity}
-          />
+        <div className="row g-2 rounded my-2">
+          <div className="col-lg-8 col-md-12 col-12 d-flex flex-md-row flex-column align-items-center justify-content-evenly">
+            <Card
+              label="Empleados"
+              typeEmployee="empleados"
+              totalEmployees={100}
+              nameCompany="MDP"
+            />
+            <Card
+              label="Usuarios"
+              typeEmployee="usuarios"
+              totalEmployees={5}
+              nameCompany="MDP"
+            />
+          </div>
+          <div className="col-lg-4 col-md-12 col-12">
+            <LastActivitiesCard
+              activities={activities}
+              handleAddActivity={handleAddActivity}
+            />
+          </div>
         </div>
       </div>
-      <div className="row justify-content-md-center align-items-center bg-transparent py-3">
-        <div className="col-md-4 col-12">
+      <div className="row gx-2 gy-3 align-items-center bg-transparent py-3 overflow-hidden">
+        <div className="col-xl-6 col-lg-5 col-md-12 col-12">
           <h3 className="text-primario">Ultimos Registros de Empleados</h3>
         </div>
 
-        <div className="col-md-5 col-6 d-flex justify-content-md-end justify-content-start align-items-center">
-          <SearchInput placeholder="Buscar empleado" maxWidth="70%" />
+        <div className="col-xl-3 col-lg-3 col-md-7 col-sm-5 col-12 d-flex justify-content-md-end justify-content-start align-items-center">
+          <SearchInput placeholder="Buscar empleado" maxWidth="100%" />
         </div>
 
-        <div className="col-md-3 col-6 d-flex justify-content-between align-content-center">
+        <div className="col-xl-3 col-lg-4 col-md-5 col-sm-7 col-12 d-flex justify-content-between align-content-center">
           <ButtonPrimaryIcon
             onClick={handleClick}
             text="Filtrar"

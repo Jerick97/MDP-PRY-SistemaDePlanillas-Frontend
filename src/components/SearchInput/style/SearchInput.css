@@ -8,12 +8,21 @@
 .search-input {
   width: 100%;
   padding-right: 2.5rem;
-  background-color: #f3f6f9;
+  background-color: var(--box4-color);
+}
+
+.search-input::placeholder {
+  color: var(--text-color-input);
+}
+
+.search-input:focus {
+  background-color: var(--box4-color);
+  color: var(--text-color-input);
 }
 
 .search-icon {
   position: absolute;
   right: 10px;
-  color: #6c757d;
+  color: var(--text-color-input);
   pointer-events: none;
 }
